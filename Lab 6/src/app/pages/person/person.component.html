@@ -1,0 +1,58 @@
+<!--<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>-->
+<div class="mt-400"></div>
+
+
+
+<div>
+  <div *ngIf="responses">
+    <div *ngFor="let res of responses; let i = index;">
+      <div>Номер: {{i}}</div>
+      <div>Назва міста: {{res.name}}</div>
+      <div>Температура: {{res.main.temp}}</div>
+      <div>Опади: {{res.weather[0].description}}</div>
+      <div>Швидкість вітру: {{res.wind.speed}}</div>
+      <div>
+
+        <ion-button (click)="openD(i, res)">Детальніше</ion-button>
+
+        <div *ngIf="flagArr[i]">
+          <div class="pos-a">
+            <p>Номер: {{i}}</p>
+            <p>Назва міста: {{arg1[i]}}</p>
+            <p>Країна: {{arg5[i]}}</p>
+            <p>Температура: {{arg2[i]}}</p>
+            <p>Температура відчувається як: {{arg6[i]}}</p>
+            <p>Опади: {{arg3[i]}}</p>
+            <p>Швидкість вітру: {{arg4[i]}}</p>
+            <ion-button (click)="flagArr[i] = false">Закрити</ion-button>
+            <ion-button (click)="storageAdd(res, i)">В вибране</ion-button>
+          </div>
+
+          <div class="bg-a" (click)="flagArr[i] = false"></div>
+        </div>
+
+
+      </div>
+      <br><br>
+
+    </div>
+
+
+  </div>
+
+
+</div>
+
+<div>
+  <ion-button (click)="flag1=!flag1">Вибране</ion-button>
+  <div *ngIf="flag1">
+    <div *ngIf="flag2">
+      <div *ngFor="let res of listData; let i = index;">
+        <p>{{res}}</p>
+      </div>
+    </div>
+  </div>
+  <ion-button (click)="clearStorage()">Видалити все</ion-button>
+</div>
+<br><br>
+

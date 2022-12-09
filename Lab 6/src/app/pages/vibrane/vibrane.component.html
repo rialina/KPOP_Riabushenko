@@ -1,0 +1,10 @@
+<div>
+  <ion-button (click)="flag1=!flag1">Вибране</ion-button>
+  <div *ngIf="flag1">
+  <div *ngFor="let res of listData; let i = index;">
+    <p>{{res}}</p>
+  </div>
+  <ion-button (click)="clearStorage()">Видалити все</ion-button>
+  <ion-button>Обновити</ion-button>
+  </div>
+</div>
