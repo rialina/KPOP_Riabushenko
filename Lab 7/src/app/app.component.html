@@ -1,0 +1,47 @@
+
+<h2>Регистрация почтового ящика</h2>
+
+
+<div class="divS">
+  <div class="div_lab">Персональная информация</div>
+<p>Фамилия: <input class="inpS" type="text" [(ngModel)]="inp1"></p>
+  <p class="red mrS">{{errInp1}}</p>
+<p>Имя: <input class="inpS" type="text" [(ngModel)]="inp2"></p>
+  <p class="red mrS">{{errInp2}}</p>
+</div>
+
+<br><br>
+<div class="divS ">
+  <div class="div_lab a1">Информация о почтовом ящике</div>
+  <p>Адрес: <input class="inpS" type="text" [(ngModel)]="inp3"></p>
+  <p class="red mrS">{{errInp3}}</p>
+  <p>Пароль: <input class="inpS" type="text" [(ngModel)]="inp4"></p>
+  <p class="red mrS">{{errInp4}}</p>
+  <p>Подтверждение пароля: <input class="inpS" type="text" [(ngModel)]="inp5"></p>
+  <p class="red mrS">{{errInp5}}</p>
+</div>
+
+<br>
+<br>
+<div class="divS">
+  <div class="div_lab">Дополнительные сведенья</div>
+  <p>Желаете получать рекламные рассылки?
+  <input name="a" type="radio" value="da"   checked (click)="opt('da')" > Да
+  <input name="a" type="radio" value="net" (click)="opt('net')"> Нет
+  </p>
+
+  <p>Желеете получать прогноз погоды на каждый день?
+    <input name="b" type="radio" value="da" checked (click)="opt1('da')"> Да
+    <input name="b" type="radio" value="net" (click)="opt1('net')"> Нет
+  </p>
+</div>
+
+<br><br>
+<button class="btn1" (click)="checkVal()">Регистрация</button>
+<button class="btn2" (click)="rel()">Сброс</button>
+<h2 class="greenC">{{outRes}}</h2>
+
+
+
+
+

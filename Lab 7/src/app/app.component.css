@@ -1,0 +1,56 @@
+
+.divS{
+
+
+  border: solid #adadad;
+  border-width: 2px;
+  border-radius: 3px;
+  padding-top: 15px;
+  padding-left: 5px;
+  width: 600px;
+}
+
+.div_lab{
+  margin-top: -27px;
+  background: white;
+  width: 190px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+
+.inpS{
+  border-radius: 2px;
+  height: 20px;
+}
+
+.a1{
+  width: 220px;
+}
+
+
+.btn1{
+  border-color: grey;
+  height: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.btn2{
+  border-color: grey;
+  height: 30px;
+  margin-left: 10px;
+}
+
+
+.red{
+  color: red;
+}
+
+.mrS{
+  margin-left: 0px;
+}
+
+.greenC{
+  color: green;
+}
