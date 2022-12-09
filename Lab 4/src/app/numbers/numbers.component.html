@@ -1,0 +1,7 @@
+<h2>Введіть три коефіцієнти рівняння, розділяючи іх пробілами</h2>
+<div>
+  <input type="text" [(ngModel)]="input" (ngModelChange)="getNumbers()" />
+</div>
+<div class="resultcomponent">
+  <app-result [numbers]="numbers"></app-result>
+</div>
