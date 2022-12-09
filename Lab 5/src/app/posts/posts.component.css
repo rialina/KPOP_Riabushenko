@@ -1,0 +1,14 @@
+.posts {
+    display: flex;
+    width: 100%;
+}
+
+.favorite-posts {
+    position: fixed;
+    right: 90px;
+    top: 30px;
+}
+
+table {
+    width: 100%;
+}

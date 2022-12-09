@@ -1,0 +1,39 @@
+<!-- <h1 class="favorite-posts-label">Favorite posts</h1> -->
+<!-- <a href="/" mat-fab color="accent" class="favorite-cities-btn">
+    <mat-icon>home</mat-icon>
+</a> -->
+<a
+  mat-fab
+  color="white"
+  href="#favorite"
+  (click)="renderFavs()"
+  class="favorite-posts"
+>
+  <mat-icon>bookmark</mat-icon>
+</a>
+<div
+  *ngIf="favoriteService.favorite.length"
+  class="mat-elevation-z8 posts-data"
+>
+  <table mat-table [dataSource]="favoriteService.favorite">
+    <ng-container matColumnDef="userid">
+      <th mat-header-cell *matHeaderCellDef>userid</th>
+      <td mat-cell *matCellDef="let item">{{ item.userId }}</td>
+    </ng-container>
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>id</th>
+      <td mat-cell *matCellDef="let item">{{ item.id }}</td>
+    </ng-container>
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef>title</th>
+      <td mat-cell *matCellDef="let item">{{ item.title }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <tr
+      mat-row
+      (click)="openDialog(item)"
+      *matRowDef="let item; columns: columnsToDisplay"
+    ></tr>
+  </table>
+</div>
