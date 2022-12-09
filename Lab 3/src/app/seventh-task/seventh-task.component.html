@@ -1,0 +1,14 @@
+<h2>
+  7. Обчислити довжину окружності, площу кругу й обсяг кулі того самого радіуса
+</h2>
+<div class="form">
+  <label>Введіть радіус кола:</label>
+  <input type="number" [(ngModel)]="radius" name="radius" />
+  <button (click)="isDisplay = true">Обчислити</button>
+</div>
+<div *ngIf="isDisplay">
+  <p>Довжина кола: {{ calculateLength() }}</p>
+  <p>Площа круга: {{ calculateArea() }}</p>
+  <p>Обʼєм кулі: {{ calculateVolume() }}</p>
+  <button (click)="isDisplay = false">Очистити</button>
+</div>
